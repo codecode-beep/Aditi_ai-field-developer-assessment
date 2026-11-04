@@ -17,7 +17,7 @@ Run these commands from the repository root:
 
 ```bash
 source .venv/bin/activate
-python -m pip install -r task-3-llm-stream-guardrail/requirements.txt
+python -m pip install -r task_3_llm_stream_guardrail/requirements.txt
 ```
 
 ## Run the servers
@@ -27,14 +27,14 @@ Start each server in a separate Terminal window. In both windows, start from the
 **Terminal 1 — mock LLM provider:**
 
 ```bash
-cd task-3-llm-stream-guardrail
+cd task_3_llm_stream_guardrail
 uvicorn mock_provider:app --host 127.0.0.1 --port 8002
 ```
 
 **Terminal 2 — streaming gateway:**
 
 ```bash
-cd task-3-llm-stream-guardrail
+cd task_3_llm_stream_guardrail
 uvicorn gateway:app --host 127.0.0.1 --port 8000
 ```
 

@@ -14,7 +14,7 @@ Run these commands from the repository root:
 
 ```bash
 source .venv/bin/activate
-python -m pip install -r task-2-mcp-gateway/requirements.txt
+python -m pip install -r task_2_mcp_gateway/requirements.txt
 ```
 
 ## Run the servers
@@ -24,14 +24,14 @@ Start each server in a separate Terminal window. In both windows, start from the
 **Terminal 1 — mock downstream server:**
 
 ```bash
-cd task-2-mcp-gateway
+cd task_2_mcp_gateway
 uvicorn mock_server:app --host 127.0.0.1 --port 8001
 ```
 
 **Terminal 2 — security gateway:**
 
 ```bash
-cd task-2-mcp-gateway
+cd task_2_mcp_gateway
 uvicorn gateway:app --host 127.0.0.1 --port 8000
 ```
 
@@ -78,5 +78,3 @@ curl -sS -X POST http://127.0.0.1:8000/mcp \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"admin_reset_key","arguments":{}}}'
 ```
-
-Stop each server with **Ctrl+C** in its Terminal window.
